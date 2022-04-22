@@ -1,0 +1,13 @@
+name: CI
+on: pull_request
+
+jobs:
+  pre-submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pr
+        #env:
+        #  TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          title="${{ github.event.pull_request.title }}"
+          echo "$title"
